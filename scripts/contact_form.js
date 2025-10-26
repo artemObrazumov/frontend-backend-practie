@@ -25,3 +25,7 @@ document.getElementById('feedbackForm').addEventListener('keypress', function(ev
         event.preventDefault();
     }
 });
+
+document.getElementById('cancel-button').addEventListener('click', function() {
+    contactModal.close();
+});
