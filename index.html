@@ -8,75 +8,81 @@
   </head>
   <body>
     <div class="page-container">
+      <!-- Хедер -->
       <header class="header">
-        <h1>Хэдер</h1>
+        <h1 class="header__title">Хэдер</h1>
       </header>
+      <!-- Навигация -->
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="index.html">Главная</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/news.html">Новости</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/news.html">Новости</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/practices.html">Практики</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/practices.html">Практики</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/goods.html">Товары</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/goods.html">Товары</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/contacts.html">Контакты</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-toggle" id="theme-toggle" type="button">Светлая</button>
           </li>
         </ul>
       </nav>
-
-      <main class="content">
-        <article class="profile-header">
-          <h1 class="profile-title">Я простой парень, учусь на фуллстэка</h1>
-          <img class="profile-photo" src="images/photo.png" alt="Фото автора" />
-          <h2 class="profile-name">Образумов Артем Александрович</h2>
-          <p class="profile-group">ЭФБО-02-24</p>
-        </article>
-
+      <main class="content main">
+        <!-- Профиль -->
+        <section class="profile__header">
+          <h1 class="profile__title">Я простой парень, учусь на фуллстэка</h1>
+          <img class="profile__photo" src="images/photo.png" alt="Фото автора" />
+          <h2 class="profile__name">Образумов Артем Александрович</h2>
+          <p class="profile__group">ЭФБО-02-24</p>
+        </section>
+        <!-- Про меня -->
         <section class="about-me">
-          <h2>Обо мне</h2>
-          <p>
-            Обо мне: Я родился в Арзамасе в 2006, потом школа, егэ, москва,
-            университет и в конце фронтенд и бэкенд разработка
+          <h2 class="about-me__title">Обо мне</h2>
+          <p class="about-me__desc">
+            Я родился в Арзамасе в 2006, потом школа, егэ, москва,
+            университет и в конце — фронтенд и бэкенд разработка.
           </p>
         </section>
-
-        <section class="skills-container">
-          <h2>Мои навыки</h2>
-          <div class="skills-grid">
-            <div class="skill-tag">HTML</div>
-            <div class="skill-tag">CSS</div>
-            <div class="skill-tag">JS</div>
-            <div class="skill-tag">Android</div>
+        <!-- Навыки -->
+        <section class="skills__container">
+          <h2 class="skills__title">Мои навыки</h2>
+          <div class="skills__grid">
+            <div class="skills__item">HTML</div>
+            <div class="skills__item">CSS</div>
+            <div class="skills__item">JS</div>
+            <div class="skills__item">Android</div>
           </div>
         </section>
-
+        <!-- Опыт работы -->
         <section class="experience-section">
           <h2 class="section-title">Мой опыт работы</h2>
-          <div class="experience-grid">
-            <article class="experience-card">
-              <h3 class="experience-title">
+          <div class="experience__grid">
+            <article class="experience__card">
+              <h3 class="experience__title">
                 Разработка под мобильные приложения
               </h3>
-              <p class="experience-desc">Работал android-разработчиком.</p>
+              <p class="experience__desc">Работал android-разработчиком.</p>
             </article>
-            <article class="experience-card">
-              <h3 class="experience-title">Делал сайты на фрилансе</h3>
-              <p class="experience-desc">Работал web-разработчиком.</p>
+            <article class="experience__card">
+              <h3 class="experience__title">Делал сайты на фрилансе</h3>
+              <p class="experience__desc">Работал web-разработчиком.</p>
             </article>
           </div>
         </section>
       </main>
-
+      <!-- Футер -->
       <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">Футер</p>
       </footer>
     </div>
+    <script src="scripts/theme_toggle.js"></script>
   </body>
 </html>

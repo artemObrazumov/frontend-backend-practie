@@ -8,59 +8,66 @@
   </head>
   <body>
     <div class="page-container">
+      <!-- Хедер -->
       <header class="header">
-        <h1>Хэдер</h1>
+        <h1 class="header__title">Хэдер</h1>
       </header>
+      <!-- Навигация -->
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Главная</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="../index.html">Главная</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">Новости</a>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="news.html">Новости</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="practices.html">Практики</a>
+          <li class="nav__item">
+            <a class="nav__link" href="practices.html">Практики</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="goods.html">Товары</a>
+          <li class="nav__item">
+            <a class="nav__link" href="goods.html">Товары</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
+          <li class="nav__item">
+            <a class="nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-toggle" id="theme-toggle" type="button">Светлая</button>
           </li>
         </ul>
       </nav>
-      <main class="content">
+      <main class="content main">
         <section class="news-section">
           <h2 class="section-title">Последние новости</h2>
-          <div class="news-list">
-            <article class="news-post">
-              <h3 class="news-title">Сегодня был хороший день</h3>
-              <p class="news-meta">27.09.2025 &nbsp; Образумов А.А</p>
-              <div class="news-content">
+          <div class="news__list">
+            <article class="news__post">
+              <h3 class="news__title">Сегодня был хороший день</h3>
+              <p class="news__meta">27.09.2025 &nbsp; Образумов А.А</p>
+              <div class="news__content">
                 <p>Я выспался</p>
               </div>
             </article>
-            <article class="news-post">
-              <h3 class="news-title">Сегодня пошел ЖЕСТКИЙ дождь</h3>
-              <p class="news-meta">13.10.2025 &nbsp; Образумов А.А</p>
-              <div class="news-content">
+            <article class="news__post">
+              <h3 class="news__title">Сегодня пошел ЖЕСТКИЙ дождь</h3>
+              <p class="news__meta">13.10.2025 &nbsp; Образумов А.А</p>
+              <div class="news__content">
                 <p>На улице сыро капец</p>
               </div>
             </article>
-            <article class="news-post">
-              <h3 class="news-title">Сегодня продолжился ЖЕСТКИЙ дождь</h3>
-              <p class="news-meta">14.10.2025 &nbsp; Образумов А.А</p>
-              <div class="news-content">
+            <article class="news__post">
+              <h3 class="news__title">Сегодня продолжился ЖЕСТКИЙ дождь</h3>
+              <p class="news__meta">14.10.2025 &nbsp; Образумов А.А</p>
+              <div class="news__content">
                 <p>На улице сыро капец, еще и ветер капец</p>
               </div>
             </article>
           </div>
         </section>
       </main>
+      <!-- Футер -->
       <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">Футер</p>
       </footer>
     </div>
+    <script src="../scripts/theme_toggle.js"></script>
   </body>
 </html>

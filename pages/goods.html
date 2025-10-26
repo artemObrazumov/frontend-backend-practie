@@ -8,59 +8,67 @@
   </head>
   <body>
     <div class="page-container">
+      <!-- хедер -->
       <header class="header">
-        <h1>Хэдер</h1>
+        <h1 class="header__title">Хэдер</h1>
       </header>
+      <!-- Навигация -->
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Главная</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="../index.html">Главная</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">Новости</a>
+          <li class="nav__item">
+            <a class="nav__link" href="news.html">Новости</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="practices.html">Практики</a>
+          <li class="nav__item">
+            <a class="nav__link" href="practices.html">Практики</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="goods.html">Товары</a>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="goods.html">Товары</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
+          <li class="nav__item">
+            <a class="nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-toggle" id="theme-toggle" type="button">Светлая</button>
           </li>
         </ul>
       </nav>
-      <main class="content">
+      <main class="content main">
         <section class="goods-section">
           <h2 class="section-title">Каталог товаров</h2>
-          <div class="goods-list">
-            <article class="good">
-              <div class="good-image">
-                <img src="../images/goods1.jpeg" alt="Зеленый велосипед"/>
+          <div class="goods__list">
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods1.jpeg" alt="Зеленый велосипед" />
               </div>
-              <h3 class="good-title">Зеленый велосипед</h3>
-              <p class="good-price">10000 рублей</p>
+              <h3 class="goods__title">Зеленый велосипед</h3>
+              <p class="goods__price">10000 рублей</p>
             </article>
-            <article class="good">
-              <div class="good-image">
-                <img src="../images/goods2.jpeg" alt="Черный велосипед"/>
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods2.jpeg" alt="Черный велосипед" />
               </div>
-              <h3 class="good-title">Черный велосипед</h3>
-              <p class="good-price">1 рубль</p>
+              <h3 class="goods__title">Черный велосипед</h3>
+              <p class="goods__price">1 рубль</p>
             </article>
-            <article class="good">
-              <div class="good-image">
-                <img src="../images/goods3.jpg" alt="Синий велосипед"/>
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods3.jpg" alt="Синий велосипед" />
               </div>
-              <h3 class="good-title">Синий велосипед</h3>
-              <p class="good-price">10000 рублей</p>
+              <h3 class="goods__title">Синий велосипед</h3>
+              <p class="goods__price goods__price--crossed">20000 рублей</p>
+              <p class="goods__price">10000 рублей</p>
             </article>
           </div>
         </section>
       </main>
+      <!-- Футер -->
       <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">Футер</p>
       </footer>
     </div>
+    <script src="../scripts/theme_toggle.js"></script>
   </body>
 </html>
