@@ -203,17 +203,6 @@ main.content {
   color: #2c3e50;
 }
 
-.contact-button {
-  background-image: linear-gradient(135deg, #af82af, #d1f52d);
-  border-radius: 4em;
-  border-color: black;
-  size: 400em;
-  width: 20em;
-  height: 6em;
-  font-size: 1.1em;
-  text-align: center;
-}
-
 .about-me,
 .post {
   background: linear-gradient(

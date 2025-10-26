@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
     <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/contact_form.css" />
   </head>
   <body>
     <div class="page-container">
@@ -34,15 +35,104 @@
         <section class="contacts-section">
           <h2 class="section-title">Наши контакты</h2>
           <address class="contacts-address">
-            <p class="contact">Email: <a href="mailto:artem.tanki.tanki.tanki.tanki@yandex.ru">artem.tanki.tanki.tanki.tanki@yandex.ru</a></p>
+            <p class="contact">
+              Email:
+              <a href="mailto:artem.tanki.tanki.tanki.tanki@yandex.ru"
+                >artem.tanki.tanki.tanki.tanki@yandex.ru</a
+              >
+            </p>
             <p class="contact">г. Москва, ул. мирэа</p>
           </address>
-          <button type="button">Позвоните мне (пожалуйста)</button>
+          <button class="contact-button" onclick="contactModal.showModal()">
+            Позвоните мне (пожалуйста)
+          </button>
         </section>
       </main>
       <footer class="footer">
         <p>Футер</p>
       </footer>
+
+      <!-- Модальное окно для формы обратной связи -->
+      <dialog id="contactModal">
+        <div class="modal-header">
+          <h2>Форма обратной связи</h2>
+        </div>
+
+        <div class="modal-content">
+          <form id="feedbackForm" method="dialog">
+            <div class="form-group">
+              <label for="name">Имя <span class="required">*</span> </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Введите ваше имя"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон <span class="required">*</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                placeholder="+7 (___) ___-__-__"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email"
+                >Электронная почта <span class="required">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@mail.ru"
+              />
+            </div>
+            <div class="form-group">
+              <label for="category"
+                >Категория обращения <span class="required">*</span></label
+              >
+              <select id="category" name="category" required>
+                <option value="">Выберите категорию</option>
+                <option value="technical">Техническая поддержка</option>
+                <option value="commercial">Коммерческое предложение</option>
+                <option value="cooperation">Сотрудничество</option>
+                <option value="complaint">Жалоба</option>
+                <option value="suggestion">Предложение</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message"
+                >Текст обращения <span class="required">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Опишите вашу проблему или вопрос..."
+              ></textarea>
+            </div>
+            <div class="modal-actions">
+              <button type="reset" id="cancel-button" class="btn btnsecondary">
+                Отмена
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="submitForm()"
+              >
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </dialog>
     </div>
+    <script src="../scripts/contact_form.js"></script>
   </body>
 </html>
