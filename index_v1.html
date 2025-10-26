@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Хедер -->
+      <header class="header">
+        <h1 class="header__title">Хэдер</h1>
+      </header>
+      <!-- Навигация -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/news.html">Новости</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/practices.html">Практики</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/goods.html">Товары</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-toggle" id="theme-toggle" type="button">Светлая</button>
+          </li>
+        </ul>
+      </nav>
+      <main class="content main">
+        <!-- Профиль -->
+        <section class="profile__header">
+          <h1 class="profile__title">Я простой парень, учусь на фуллстэка</h1>
+          <img class="profile__photo" src="images/photo.png" alt="Фото автора" />
+          <h2 class="profile__name">Образумов Артем Александрович</h2>
+          <p class="profile__group">ЭФБО-02-24</p>
+        </section>
+        <!-- Про меня -->
+        <section class="about-me">
+          <h2 class="about-me__title">Обо мне</h2>
+          <p class="about-me__desc">
+            Я родился в Арзамасе в 2006, потом школа, егэ, москва,
+            университет и в конце — фронтенд и бэкенд разработка.
+          </p>
+        </section>
+        <!-- Навыки -->
+        <section class="skills__container">
+          <h2 class="skills__title">Мои навыки</h2>
+          <div class="skills__grid">
+            <div class="skills__item">HTML</div>
+            <div class="skills__item">CSS</div>
+            <div class="skills__item">JS</div>
+            <div class="skills__item">Android</div>
+          </div>
+        </section>
+        <!-- Опыт работы -->
+        <section class="experience-section">
+          <h2 class="section-title">Мой опыт работы</h2>
+          <div class="experience__grid">
+            <article class="experience__card">
+              <h3 class="experience__title">
+                Разработка под мобильные приложения
+              </h3>
+              <p class="experience__desc">Работал android-разработчиком.</p>
+            </article>
+            <article class="experience__card">
+              <h3 class="experience__title">Делал сайты на фрилансе</h3>
+              <p class="experience__desc">Работал web-разработчиком.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <!-- Футер -->
+      <footer class="footer">
+        <p class="footer__text">Футер</p>
+      </footer>
+    </div>
+    <script src="scripts/theme_toggle.js"></script>
+  </body>
+</html>

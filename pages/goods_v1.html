@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- хедер -->
+      <header class="header">
+        <h1 class="header__title">Хэдер</h1>
+      </header>
+      <!-- Навигация -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="../index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="news.html">Новости</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="practices.html">Практики</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="goods.html">Товары</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <button class="theme-toggle" id="theme-toggle" type="button">Светлая</button>
+          </li>
+        </ul>
+      </nav>
+      <main class="content main">
+        <section class="goods-section">
+          <h2 class="section-title">Каталог товаров</h2>
+          <div class="goods__list">
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods1.jpeg" alt="Зеленый велосипед" />
+              </div>
+              <h3 class="goods__title">Зеленый велосипед</h3>
+              <p class="goods__price">10000 рублей</p>
+            </article>
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods2.jpeg" alt="Черный велосипед" />
+              </div>
+              <h3 class="goods__title">Черный велосипед</h3>
+              <p class="goods__price">1 рубль</p>
+            </article>
+            <article class="goods__item">
+              <div class="goods__image">
+                <img src="../images/goods3.jpg" alt="Синий велосипед" />
+              </div>
+              <h3 class="goods__title">Синий велосипед</h3>
+              <p class="goods__price goods__price--crossed">20000 рублей</p>
+              <p class="goods__price">10000 рублей</p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <!-- Футер -->
+      <footer class="footer">
+        <p class="footer__text">Футер</p>
+      </footer>
+    </div>
+    <script src="../scripts/theme_toggle.js"></script>
+  </body>
+</html>
