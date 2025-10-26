@@ -1,48 +1,55 @@
-/* ===== БАЗОВЫЕ СТИЛИ ===== */
-* {
-  box-sizing: border-box;
-}
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Современный
-шрифт для лучшей читаемости */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Современный шрифт для лучшей читаемости */
   margin: 0; /* Убираем стандартные отступы браузера */
   padding: 0; /* Убираем стандартные внутренние отступы */
   background: linear-gradient(
     135deg,
-    #667eea 0%,
-    #764ba2 100%
-  ); /* Красивый
-градиентный фон всей страницы */
+    #873289 0%,
+    #48b1cc 100%
+  ); /* Красивый градиентный фон всей страницы */
   min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
 }
-/* ===== КОНТЕЙНЕР СТРАНИЦЫ ===== */
+
+* {
+  box-sizing: border-box;
+}
+
 .page-container {
   max-width: 1200px; /* Максимальная ширина контента */
   margin: 0 auto; /* Центрирование контейнера по горизонтали */
   background: white; /* Белый фон для основного содержимого */
   min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Легкая тень вокруг всего контента */
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
 }
-/* ===== ШАПКА ===== */
+
 .header {
   background: linear-gradient(
     135deg,
     #2c3e50 0%,
     #34495e 100%
-  ); /* Темный
-градиентный фон */
+  ); /* Темный градиентный фон */
   color: white; /* Белый цвет текста */
   text-align: center; /* Выравнивание текста по центру */
   padding: 30px; /* Внутренние отступы со всех сторон */
   font-size: 28px; /* Размер шрифта */
   font-weight: 300; /* Легкое начертание шрифта */
   letter-spacing: 2px; /* Расстояние между буквами */
+  grid-area: header; /* привязка к области в grid`e */
 }
-/* ===== НАВИГАЦИЯ ===== */
+
 .nav {
   background: #2c3e50; /* Темно-синий фон навигации */
   padding: 20px 0; /* Вертикальные отступы */
+  grid-area: nav; /* привязка к области в grid`e */
 }
+
 .nav-list {
   list-style: none; /* Убираем маркеры списка */
   margin: 0; /* Убираем внешние отступы */
@@ -51,9 +58,11 @@ body {
   justify-content: center; /* Выравнивание по центру */
   gap: 25px; /* Расстояние между элементами навигации */
 }
+
 .nav-item {
   margin: 0; /* Убираем отступы у пунктов меню */
 }
+
 .nav-link {
   color: white; /* Белый цвет текста ссылок */
   text-decoration: none; /* Убираем подчеркивание ссылок */
@@ -62,33 +71,38 @@ body {
   transition: all 0.3s ease; /* Плавные анимации при изменении */
   font-weight: 500; /* Средняя жирность шрифта */
 }
+
 .nav-link:hover {
   background: rgba(
     255,
     255,
     255,
     0.1
-  ); /* Полупрозрачный белый фон при наведении
-*/
+  ); /* Полупрозрачный белый фон при наведении */
   transform: translateY(-2px); /* Легкое поднятие элемента при наведении */
 }
-/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
-.content {
+
+main.content {
   padding: 40px; /* Внутренние отступы контента */
   max-width: 900px; /* Максимальная ширина контента */
   margin: 0 auto; /* Центрирование контента */
+  align-items: center; /* Выравнивание по центру по горизонтали */
+  grid-area: main; /* привязка к области в grid`e */
 }
+
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
 .profile-header {
   text-align: center; /* Выравнивание по центру */
   margin-bottom: 40px; /* Отступ снизу */
 }
+
 .profile-title {
   font-size: 32px; /* Размер шрифта заголовка */
   color: #2c3e50; /* Темно-синий цвет текста */
   margin-bottom: 10px; /* Отступ снизу */
   font-weight: 300; /* Легкое начертание шрифта */
 }
+
 .profile-photo {
   width: 220px; /* Фиксированная ширина фото */
   height: 280px; /* Фиксированная высота фото */
@@ -98,46 +112,32 @@ body {
   border: 4px solid #667eea; /* Синяя рамка вокруг фото */
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); /* Тень с синим оттенком */
 }
+
 .profile-name {
   font-size: 24px; /* Размер шрифта имени */
   color: #2c3e50; /* Темно-синий цвет текста */
   margin: 10px 0; /* Вертикальные отступы */
   font-weight: 500; /* Средняя жирность шрифта */
 }
+
 .profile-group {
   font-size: 18px; /* Размер шрифта группы */
   color: #7f8c8d; /* Серый цвет текста */
   margin: 5px 0; /* Вертикальные отступы */
 }
-.about-me {
-  background: linear-gradient(
-    135deg,
-    #f8f9fa 0%,
-    #e9ecef 100%
-  ); /* Светлый
-градиентный фон */
-  padding: 25px; /* Внутренние отступы */
-  border-radius: 15px; /* Скругленные углы */
-  margin: 30px 0; /* Вертикальные отступы */
-  border-left: 5px solid #667eea; /* Синяя полоса слева */
-  font-size: 16px; /* Размер шрифта текста */
-  line-height: 1.8; /* Межстрочный интервал */
+
+.skills-grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, 1fr);
+  gap: 10px;
 }
-/* ===== НАВЫКИ ===== */
-.skills-container {
-  display: flex; /* Горизонтальное расположение навыков */
-  justify-content: center; /* Выравнивание по центру */
-  flex-wrap: wrap; /* Перенос на новую строку при необходимости */
-  gap: 15px; /* Расстояние между навыками */
-  margin: 30px 0; /* Вертикальные отступы */
-}
+
 .skill-tag {
   background: linear-gradient(
     135deg,
     #4facfe 0%,
     #00f2fe 100%
-  ); /* Голубой
-градиентный фон */
+  ); /* Голубой градиентный фон */
   color: white; /* Белый цвет текста */
   padding: 12px 25px; /* Внутренние отступы */
   border-radius: 25px; /* Круглые углы (капсульная форма) */
@@ -145,16 +145,26 @@ body {
   font-size: 14px; /* Размер шрифта */
   box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); /* Тень с голубым оттенком */
   transition: all 0.3s ease; /* Плавные анимации при изменении */
+  text-align: center;
 }
+
 .skill-tag:hover {
   transform: translateY(-3px); /* Поднятие элемента при наведении */
-  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при
-наведении */
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при наведении */
 }
+
 /* ===== ОПЫТ РАБОТЫ ===== */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
 .experience-section {
   margin-top: 50px; /* Отступ сверху */
 }
+
 .section-title {
   font-size: 28px; /* Размер шрифта заголовка секции */
   color: #2c3e50; /* Темно-синий цвет текста */
@@ -162,9 +172,8 @@ body {
   margin-bottom: 30px; /* Отступ снизу */
   font-weight: 300; /* Легкое начертание шрифта */
 }
-.experience-card,
-.post,
-.good {
+
+.experience-card {
   background: white; /* Белый фон карточки */
   padding: 25px; /* Внутренние отступы */
   margin: 20px 0; /* Вертикальные отступы */
@@ -173,37 +182,110 @@ body {
   border-left: 4px solid #667eea; /* Синяя полоса слева */
   transition: transform 0.3s ease; /* Плавная анимация трансформации */
 }
-.experience-card:hover,
-.post:hover {
+
+.experience-card:hover {
   transform: translateX(5px); /* Сдвиг вправо при наведении */
 }
-.good:hover {
-  transform: translateY(-5px); /* Сдвиг вверх при наведении */
-}
+
 .experience-title {
   font-size: 20px; /* Размер шрифта заголовка опыта */
   color: #2c3e50; /* Темно-синий цвет текста */
   margin: 0 0 10px 0; /* Отступ снизу */
   font-weight: 600; /* Жирный шрифт */
 }
+
+.contact-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.contact-button {
+  background-image: linear-gradient(135deg, #af82af, #d1f52d);
+  border-radius: 4em;
+  border-color: black;
+  size: 400em;
+  width: 20em;
+  height: 6em;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.about-me,
+.post {
+  background: linear-gradient(
+    135deg,
+    #f8f9fa 0%,
+    #e9ecef 100%
+  ); /* Светлый 
+    градиентный фон */
+  padding: 10px; /* Внутренние отступы */
+  border-radius: 15px; /* Скругленные углы */
+  margin: 30px 0; /* Вертикальные отступы */
+  border-left: 5px solid #667eea; /* Синяя полоса слева */
+  font-size: 16px; /* Размер шрифта текста */
+  line-height: 1.8; /* Межстрочный интервал */
+}
+
 .experience-desc {
   color: #7f8c8d; /* Серый цвет текста */
   line-height: 1.6; /* Межстрочный интервал */
   margin: 0; /* Убираем отступы */
 }
+
 /* ===== ФУТЕР ===== */
 .footer {
   background: linear-gradient(
     135deg,
     #2c3e50 0%,
     #34495e 100%
-  ); /* Темный
-градиентный фон */
+  ); /* Темный градиентный фон */
   color: white; /* Белый цвет текста */
   text-align: center; /* Выравнивание по центру */
   padding: 30px; /* Внутренние отступы */
   margin-top: 50px; /* Отступ сверху */
+  grid-area: footer;
 }
+
+.title {
+  text-align: center;
+}
+
+.date,
+.author {
+  text-align: left;
+  font-size: 12px;
+  color: #302d2e;
+  margin: 0px;
+}
+
+.post-content {
+  text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main.content {
+    padding: 20px;
+  }
+}
+
 .post .title {
   text-align: center;
   font-weight: 600;
@@ -214,14 +296,14 @@ body {
   font-style: italic;
   margin-bottom: 8px;
 }
-.goods_list {
+.goods-list {
   display: flex;
   justify-content: space-between;
 }
 .good {
   width: 32%;
 }
-.good_image {
+.good-image {
   aspect-ratio: 1/1;
   align-content: center;
 }

@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1>Хэдер</h1>
+      </header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Главная</a>
@@ -27,50 +29,54 @@
             <a class="nav-link" href="pages/contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <div class="content">
-        <div class="profile-header">
+      </nav>
+
+      <main class="content">
+        <article class="profile-header">
           <h1 class="profile-title">Я простой парень, учусь на фуллстэка</h1>
-          <img
-            class="profile-photo"
-            src="images/photo.png"
-            alt="Фото
-автора"
-          />
+          <img class="profile-photo" src="images/photo.png" alt="Фото автора" />
           <h2 class="profile-name">Образумов Артем Александрович</h2>
           <p class="profile-group">ЭФБО-02-24</p>
-        </div>
+        </article>
 
-        <div class="about-me">
+        <section class="about-me">
+          <h2>Обо мне</h2>
           <p>
-            Обо мне: Я родился в Арзамасе в 2006, потом школа, егэ, москва, университет и в конце фронтенд и бэкенд разработка
+            Обо мне: Я родился в Арзамасе в 2006, потом школа, егэ, москва,
+            университет и в конце фронтенд и бэкенд разработка
           </p>
-        </div>
+        </section>
 
-        <div class="skills-container">
-          <div class="skill-tag">HTML</div>
-          <div class="skill-tag">CSS</div>
-          <div class="skill-tag">JS</div>
-          <div class="skill-tag">Android</div>
-        </div>
+        <section class="skills-container">
+          <h2>Мои навыки</h2>
+          <div class="skills-grid">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">CSS</div>
+            <div class="skill-tag">JS</div>
+            <div class="skill-tag">Android</div>
+          </div>
+        </section>
 
-        <div class="experience-section">
+        <section class="experience-section">
           <h2 class="section-title">Мой опыт работы</h2>
-          <div class="experience-card">
-            <h3 class="experience-title">Разработка под мобильные приложения</h3>
-            <p class="experience-desc">
-              Работал android-разработчиком.
-            </p>
+          <div class="experience-grid">
+            <article class="experience-card">
+              <h3 class="experience-title">
+                Разработка под мобильные приложения
+              </h3>
+              <p class="experience-desc">Работал android-разработчиком.</p>
+            </article>
+            <article class="experience-card">
+              <h3 class="experience-title">Делал сайты на фрилансе</h3>
+              <p class="experience-desc">Работал web-разработчиком.</p>
+            </article>
           </div>
-          <div class="experience-card">
-            <h3 class="experience-title">Делал сайты на фрилансе</h3>
-            <p class="experience-desc">
-              Работал web-разработчиком.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer">Футер</div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Футер</p>
+      </footer>
     </div>
   </body>
 </html>

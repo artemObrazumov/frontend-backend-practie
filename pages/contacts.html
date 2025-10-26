@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1>Хэдер</h1>
+      </header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="../index.html">Главная</a>
@@ -27,13 +29,20 @@
             <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <div class="content">
-        <div class="contact">artem.tanki.tanki.tanki.tanki@yandex.ru</div>
-        <div class="contact">г.Москва, ул. мирэа</div>
-        <button>Позвоните мне (пожалуйста)</button>
-      </div>
-      <div class="footer">Футер</div>
+      </nav>
+      <main class="content">
+        <section class="contacts-section">
+          <h2 class="section-title">Контакты</h2>
+          <address class="contacts-address">
+            <p class="contact">Email: <a href="mailto:artem.tanki.tanki.tanki.tanki@yandex.ru">artem.tanki.tanki.tanki.tanki@yandex.ru</a></p>
+            <p class="contact">г. Москва, ул. мирэа</p>
+          </address>
+          <button type="button">Позвоните мне (пожалуйста)</button>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>Футер</p>
+      </footer>
     </div>
   </body>
 </html>

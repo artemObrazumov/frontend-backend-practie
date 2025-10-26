@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1>Хэдер</h1>
+      </header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="../index.html">Главная</a>
@@ -27,32 +29,38 @@
             <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <h2 class="section-title">Наши товары</h2>
-      <div class="content goods_list">
-        <div class="good">
-          <div class="good_image">
-            <img src="../images/goods1.jpeg"/>
+      </nav>
+      <main class="content">
+        <section class="goods-section">
+          <h2 class="section-title">Наши товары</h2>
+          <div class="goods-list">
+            <article class="good">
+              <div class="good-image">
+                <img src="../images/goods1.jpeg" alt="Зеленый велосипед"/>
+              </div>
+              <h3 class="good-title">Зеленый велосипед</h3>
+              <p class="good-price">10000 рублей</p>
+            </article>
+            <article class="good">
+              <div class="good-image">
+                <img src="../images/goods2.jpeg" alt="Черный велосипед"/>
+              </div>
+              <h3 class="good-title">Черный велосипед</h3>
+              <p class="good-price">1 рубль</p>
+            </article>
+            <article class="good">
+              <div class="good-image">
+                <img src="../images/goods3.jpg" alt="Синий велосипед"/>
+              </div>
+              <h3 class="good-title">Синий велосипед</h3>
+              <p class="good-price">10000 рублей</p>
+            </article>
           </div>
-          <div class="title">Зеленый велосипед</div>
-          <div class="price">10000 рублей</div>
-        </div>
-        <div class="good">
-          <div class="good_image">
-            <img src="../images/goods2.jpeg"/>
-          </div>
-          <div class="title">Черный велосипед</div>
-          <div class="price">1 рубль</div>
-        </div>
-        <div class="good">
-          <div class="good_image">
-            <img src="../images/goods3.jpg"/>
-          </div>
-          <div class="title">Синий велосипед</div>
-          <div class="price">10000 рублей</div>
-        </div>
-      </div>
-      <div class="footer">Футер</div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>Футер</p>
+      </footer>
     </div>
   </body>
 </html>

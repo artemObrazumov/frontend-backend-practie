@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1>Хэдер</h1>
+      </header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="../index.html">Главная</a>
@@ -27,25 +29,38 @@
             <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <div class="content post_list">
-        <div class="post">
-          <div class="title">Сегодня был хороший день</div>
-          <div class="date_author">27.09.2025 Образумов А.А</div>
-          <div class="post_content">Я выспался</div>
-        </div>
-        <div class="post">
-          <div class="title">Сегодня пошел ЖЕСТКИЙ дождь</div>
-          <div class="date_author">13.10.2025 Образумов А.А</div>
-          <div class="post_content">На улице сыро капец</div>
-        </div>
-        <div class="post">
-          <div class="title">Сегодня продолжился ЖЕСТКИЙ дождь</div>
-          <div class="date_author">14.10.2025 Образумов А.А</div>
-          <div class="post_content">На улице сыро капец, еще и ветер капец</div>
-        </div>
-      </div>
-      <div class="footer">Футер</div>
+      </nav>
+      <main class="content">
+        <section class="news-section">
+          <h2 class="section-title">Новости</h2>
+          <div class="news-list">
+            <article class="news-post">
+              <h3 class="news-title">Сегодня был хороший день</h3>
+              <p class="news-meta">27.09.2025 &nbsp; Образумов А.А</p>
+              <div class="news-content">
+                <p>Я выспался</p>
+              </div>
+            </article>
+            <article class="news-post">
+              <h3 class="news-title">Сегодня пошел ЖЕСТКИЙ дождь</h3>
+              <p class="news-meta">13.10.2025 &nbsp; Образумов А.А</p>
+              <div class="news-content">
+                <p>На улице сыро капец</p>
+              </div>
+            </article>
+            <article class="news-post">
+              <h3 class="news-title">Сегодня продолжился ЖЕСТКИЙ дождь</h3>
+              <p class="news-meta">14.10.2025 &nbsp; Образумов А.А</p>
+              <div class="news-content">
+                <p>На улице сыро капец, еще и ветер капец</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>Футер</p>
+      </footer>
     </div>
   </body>
 </html>
