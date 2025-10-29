@@ -496,6 +496,10 @@ body {
     width: 100%;
     max-width: none;
   }
+  .nav__link {
+    padding: var(--spacing-xxs) var(--spacing-xxs);
+    align-content: center;
+  }
 }
 @media (max-width: 768px) {
   .nav__list {
@@ -511,6 +515,13 @@ body {
   }
   .content {
     padding: var(--spacing-md);
+    max-width: 100vw;
+  }
+  .contacts__link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 }
 @media (max-width: 600px) {
